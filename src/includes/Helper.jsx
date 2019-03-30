@@ -35,7 +35,8 @@ export const Helper = (method, url, token, body) => {
                 })
 
         )
-    } else if (method === "DELETE") {
+    }
+    else if (method === "DELETE") {
         return (
             fetch(BASEURL + "api/" + url, {
                 method: 'DELETE',
@@ -59,6 +60,22 @@ export const Helper = (method, url, token, body) => {
                     'Content-Type': 'application/json'
                 },
                 body: JSON.stringify(body)
+            })
+                .then(res => { return res.json() })
+                .catch(err => {
+                    console.log(err);
+                })
+
+        )
+    } else if (method === "FILE") {
+        return (
+            fetch(BASEURL + "api/" + url, {
+                method: 'POST',
+                headers: {
+                    'Authorization': `Bearer ${token}`,
+                    // 'Content-Type': 'multipart/form-data'
+                },
+                body: body
             })
                 .then(res => { return res.json() })
                 .catch(err => {

@@ -117,8 +117,12 @@ export default class MainPage extends PureComponent {
             <CarouselControl direction="next" directionText="Next" onClickHandler={this.next} />
           </Carousel>
         </div>
-        <div className="container-fluid content-wrapper">
-          <h4 className="title">Some Popular Posts</h4>
+        <div className="container content-wrapper">
+          <div className="row mt-3">
+            <div className="col-12 d-flex justify-content-center">
+              <h4 className="title">Some Popular Posts</h4>
+            </div>
+          </div>
           <div className="row content">
             <div className="col-md-4">
               <div className="content-item">

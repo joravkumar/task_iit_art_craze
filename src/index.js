@@ -15,15 +15,18 @@ import Pricing from './Components/Pricing';
 import ArtistPanel from './Artist';
 import ArtistLogin from './Artist/ArtistLogin';
 import PostsBySearch from './Components/PostsBySearch';
+import TrendingPosts from './Components/TrendingPosts';
+import MusicPost from './Components/MusicPost';
 
 ReactDOM.render(
     <Router>
         <>
             <Route exact path="/" component={MainPage} />
-            <Route exact path="/post" component={Post} />
             <Route exact path="/category/:category_id" component={SubCategories} />
             <Route exact path="/category/posts-search/:filter_query" component={PostsBySearch} />
             <Route exact path="/pricing" component={Pricing} />
+            <Route exact path="/music/:musicId" component={MusicPost} />
+            <Route exact path="/trendings" component={TrendingPosts} />
             <Route exact path="/login" component={Login} />
             <Route exact path="/register" component={Register} />
             <Route exact path="/forgot-password" component={ForgotPassword} />

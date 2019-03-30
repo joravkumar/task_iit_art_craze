@@ -30,7 +30,7 @@ const Header = _ => {
             <nav id="nav">
                 <ul>
                     <li><Link to="/">Home</Link></li>
-                    <li><Link to="/post">Posts</Link></li>
+                    <li><Link to="/trendings">Trending's</Link></li>
                     <li><a href="#">Pricing</a></li>
                     <li><Link to="/artist">Sell Content</Link></li>
                 </ul>
